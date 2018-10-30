@@ -51,12 +51,6 @@ public class StockApp extends javax.swing.JFrame {
 
         jLabel3.setText("Price");
 
-        product_name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                product_nameActionPerformed(evt);
-            }
-        });
-
         cb_category.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Culture And Art", "Food", "Electronic", " " }));
 
         message_notes.setForeground(new java.awt.Color(255, 51, 51));
@@ -172,11 +166,6 @@ public class StockApp extends javax.swing.JFrame {
 
     }//GEN-LAST:event_add_productActionPerformed
 
-    private void product_nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_product_nameActionPerformed
-        
-
-    }//GEN-LAST:event_product_nameActionPerformed
-
     private void update_productActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_update_productActionPerformed
         message_notes.setText("");
         DefaultTableModel model = (DefaultTableModel) product_table.getModel();
@@ -192,7 +181,7 @@ public class StockApp extends javax.swing.JFrame {
             model.setValueAt(cb_category.getSelectedItem().toString(), selected_row, 1);
             model.setValueAt(price_field.getText(), selected_row, 2);
             
-            message_notes.setText("Product has succesfully updated..");
+            message_notes.setText("Product has successfully updated..");
         }
 
     }//GEN-LAST:event_update_productActionPerformed
